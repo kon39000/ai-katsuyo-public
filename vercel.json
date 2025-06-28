@@ -1,3 +1,17 @@
 {
-  "name": "ai-katsuyo"
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/slide/index.html"
+    },
+    {
+      "source": "/slides",
+      "destination": "/slide/index.html"
+    },
+    {
+      "source": "/peatix",
+      "destination": "/slide/index.html"
+    }
+  ]
 }
