@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0, user-scalable=no">
+    <title>もう時間がないとは言わせない！Gemini 2.5 Proで始める週末作家のススメ - ウミノ | 第2回AI活用大発表会</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #21D4FD 0%, #B721FF 100%);
+            color: #fff;
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 0;
+            padding: 80px 60px 60px 60px;
+            box-shadow: none;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .event-header {
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            right: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+        .event-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #2d3436;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .event-date {
+            font-size: 1.3em;
+            color: #636e72;
+            font-weight: 600;
+        }
+        .speaker-profile {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 25px;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .speaker-icon {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #21D4FD;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            flex-shrink: 0;
+        }
+        .speaker-info h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            color: #2d3436;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+        }
+        .speaker-info .org {
+            font-size: 1.5em;
+            color: #636e72;
+            font-weight: 600;
+        }
+        .session-title {
+            font-size: 2em;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #21D4FD, #B721FF);
+            color: #fff;
+            padding: 25px;
+            border-radius: 20px;
+            font-weight: bold;
+            box-shadow: 0 20px 50px rgba(33, 212, 253, 0.4);
+            flex-shrink: 0;
+        }
+        .session-time {
+            font-size: 1.5em;
+            text-align: center;
+            color: #2d3436;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+        .gemini-logo {
+            text-align: center;
+            font-size: 2.4em;
+            font-weight: bold;
+            margin: 20px 0;
+            background: linear-gradient(45deg, #4285F4, #EA4335, #FBBC04, #34A853);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.2));
+            flex-shrink: 0;
+        }
+        .weekend-writer {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            font-size: 3.2em;
+            margin: 20px 0;
+            flex-shrink: 0;
+        }
+        .writer-icon {
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+            animation: bounce 2.5s ease-in-out infinite;
+        }
+        .writer-icon:nth-child(1) { animation-delay: 0s; }
+        .writer-icon:nth-child(2) { animation-delay: 0.5s; }
+        .writer-icon:nth-child(3) { animation-delay: 1s; }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-20px) scale(1.05); }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="event-header">
+            <div class="event-title">第2回AI活用大発表会</div>
+            <div class="event-date">2025年6月28日（土）</div>
+        </div>
+        <div class="speaker-profile">
+            <img src="../image/umino_icon.jpg" alt="ウミノ" class="speaker-icon">
+            <div class="speaker-info">
+                <h1>ウミノ</h1>
+                <p class="org">AIとマーケティングの専門家</p>
+            </div>
+        </div>
+        <div class="session-title">
+            もう時間がないとは言わせない！<br>
+            Gemini 2.5 Proで始める週末作家のススメ
+        </div>
+        <div class="gemini-logo">Gemini 2.5 Pro</div>
+        <div class="weekend-writer">
+            <span class="writer-icon">📝</span>
+            <span class="writer-icon">✨</span>
+            <span class="writer-icon">📚</span>
+        </div>
+        <div style="text-align: center;">
+            <div class="session-time">
+                15:30 - 15:50
+            </div>
+        </div>
+    </div>
+</body>
+</html>

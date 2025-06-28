@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0, user-scalable=no">
+    <title>Gemini × Googleアプリを連携させた旅行計画 - ショウ | 第2回AI活用大発表会</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+            color: #fff;
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 0;
+            padding: 80px 60px 60px 60px;
+            box-shadow: none;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .event-header {
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            right: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+        .event-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2d3436;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+        .event-date {
+            font-size: 1.1em;
+            color: #636e72;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        .speaker-profile {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 25px;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .speaker-icon {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #f5576c;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+            flex-shrink: 0;
+        }
+        .speaker-info h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            color: #2d3436;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+            flex-shrink: 0;
+        }
+        .speaker-info .org {
+            font-size: 1.5em;
+            color: #636e72;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        .session-title {
+            font-size: 2.0em;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #f5576c, #f093fb);
+            color: #fff;
+            padding: 25px;
+            border-radius: 20px;
+            font-weight: bold;
+            box-shadow: 0 15px 40px rgba(245, 87, 108, 0.4);
+            flex-shrink: 0;
+        }
+        .session-time {
+            font-size: 1.5em;
+            text-align: center;
+            color: #2d3436;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+        .google-gemini {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            margin: 20px 0;
+            font-size: 2.0em;
+            font-weight: bold;
+            color: #2d3436;
+            flex-shrink: 0;
+        }
+        .logo-text {
+            background: linear-gradient(45deg, #4285F4, #EA4335, #FBBC04, #34A853);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+        }
+        .travel-icons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 20px 0;
+            font-size: 3.2em;
+            flex-shrink: 0;
+        }
+        .travel-icon {
+            filter: drop-shadow(0 8px 16px rgba(0,0,0,0.3));
+            animation: float 3s ease-in-out infinite;
+            flex-shrink: 0;
+        }
+        .travel-icon:nth-child(1) { animation-delay: 0s; }
+        .travel-icon:nth-child(2) { animation-delay: 0.5s; }
+        .travel-icon:nth-child(3) { animation-delay: 1s; }
+        .travel-icon:nth-child(4) { animation-delay: 1.5s; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-12px) scale(1.05); }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="event-header">
+            <div class="event-title">第2回AI活用大発表会</div>
+            <div class="event-date">2025年6月28日（土）</div>
+        </div>
+        <div class="speaker-profile">
+            <img src="../image/syou_icon.png" alt="ショウ" class="speaker-icon">
+            <div class="speaker-info">
+                <h1>ショウ</h1>
+                <p class="org">銘心</p>
+            </div>
+        </div>
+        <div class="session-title">
+            「旅行するなら、どこに行きたい？」<br>
+            Gemini × Googleアプリを連携させた旅行計画
+        </div>
+        <div class="google-gemini">
+            <span class="logo-text">Gemini</span>
+            <span style="color: #f5576c;">×</span>
+            <span class="logo-text">Google</span>
+        </div>
+        <div class="travel-icons">
+            <span class="travel-icon">✈️</span>
+            <span class="travel-icon">🗺️</span>
+            <span class="travel-icon">📍</span>
+            <span class="travel-icon">🏨</span>
+        </div>
+        <div style="text-align: center;">
+            <div class="session-time">
+                13:30 - 13:50
+            </div>
+        </div>
+    </div>
+</body>
+</html>

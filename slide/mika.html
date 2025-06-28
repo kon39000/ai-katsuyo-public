@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0, user-scalable=no">
+    <title>私の声、周りにどう聞こえてる？ - ボイストレーナーみか | 第2回AI活用大発表会</title>
+    <link rel="stylesheet" href="youtube-template.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        }
+        .speaker-icon {
+            border-color: #fed6e3;
+        }
+        .session-title {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        }
+        .voice-wave {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin: 20px 0;
+            flex-shrink: 0;
+        }
+        .wave-bar {
+            width: 10px;
+            background: linear-gradient(to top, #a8edea, #fed6e3);
+            border-radius: 5px;
+            animation: wave 1.2s ease-in-out infinite;
+        }
+        .wave-bar:nth-child(1) { height: 30px; animation-delay: 0s; }
+        .wave-bar:nth-child(2) { height: 60px; animation-delay: 0.1s; }
+        .wave-bar:nth-child(3) { height: 45px; animation-delay: 0.2s; }
+        .wave-bar:nth-child(4) { height: 80px; animation-delay: 0.3s; }
+        .wave-bar:nth-child(5) { height: 55px; animation-delay: 0.4s; }
+        .wave-bar:nth-child(6) { height: 70px; animation-delay: 0.5s; }
+        .wave-bar:nth-child(7) { height: 40px; animation-delay: 0.6s; }
+        @keyframes wave {
+            0%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(1.8); }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="event-header">
+            <div class="event-title">第2回AI活用大発表会</div>
+            <div class="event-date">2025年6月28日（土）</div>
+        </div>
+        <div class="speaker-profile">
+            <img src="../image/mika_icon.jpg" alt="ボイストレーナーみか" class="speaker-icon">
+            <div class="speaker-info">
+                <h1>ボイストレーナーみか</h1>
+                <p class="org">声DAO</p>
+            </div>
+        </div>
+        <div class="session-title">
+            「私の声、周りにどう聞こえてる？」<br>
+            AIが解き明かす、話し方・歌声の秘密
+        </div>
+        <div class="voice-wave">
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+        </div>
+        <div style="text-align: center;">
+            <div class="session-time">12:50 - 13:10</div>
+        </div>
+    </div>
+</body>
+</html>

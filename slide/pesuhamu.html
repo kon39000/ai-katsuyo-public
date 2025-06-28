@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0, user-scalable=no">
+    <title>手離れ最強！ManusとMiriCanvasで叶える"放置プレイ"コンテンツ制作 - ペスハム | 第2回AI活用大発表会</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+            color: #fff;
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 0;
+            padding: 80px 60px 60px 60px;
+            box-shadow: none;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .event-header {
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            right: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+        .event-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #2d3436;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .event-date {
+            font-size: 1.3em;
+            color: #636e72;
+            font-weight: 600;
+        }
+        .speaker-profile {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 40px;
+            justify-content: center;
+        }
+        .speaker-icon {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 6px solid #30cfd0;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        .speaker-info h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            color: #2d3436;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+        }
+        .speaker-info .org {
+            font-size: 1.8em;
+            color: #636e72;
+            font-weight: 600;
+        }
+        .session-title {
+            font-size: 1.8em;
+            line-height: 1.2;
+            margin: 15px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #30cfd0, #330867);
+            color: #fff;
+            padding: 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 20px 50px rgba(48, 207, 208, 0.4);
+            flex-shrink: 0;
+            max-width: 90%;
+        }
+        .session-time {
+            font-size: 1.8em;
+            text-align: center;
+            color: #2d3436;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 12px 25px;
+            border-radius: 50px;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .automation-flow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            margin: 20px 0;
+            font-size: 1.8em;
+            flex-shrink: 0;
+        }
+        .flow-item {
+            background: rgba(48, 207, 208, 0.1);
+            padding: 18px 25px;
+            border-radius: 12px;
+            border: 3px solid #30cfd0;
+            color: #2d3436;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(48, 207, 208, 0.2);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        .flow-item:nth-child(1) { animation-delay: 0s; }
+        .flow-item:nth-child(3) { animation-delay: 0.5s; }
+        .flow-item:nth-child(5) { animation-delay: 1s; }
+        .arrow {
+            font-size: 2em;
+            color: #30cfd0;
+            filter: drop-shadow(0 5px 15px rgba(48, 207, 208, 0.5));
+        }
+        @keyframes glow {
+            from { box-shadow: 0 10px 30px rgba(48, 207, 208, 0.2); }
+            to { box-shadow: 0 15px 40px rgba(48, 207, 208, 0.4); }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="event-header">
+            <div class="event-title">第2回AI活用大発表会</div>
+            <div class="event-date">2025年6月28日（土）</div>
+        </div>
+        <div class="speaker-profile">
+            <img src="../image/pesuhamu_icon.jpg" alt="ペスハム" class="speaker-icon">
+            <div class="speaker-info">
+                <h1>ペスハム</h1>
+                <p class="org">メタマケ</p>
+            </div>
+        </div>
+        <div class="session-title">
+            手離れ最強！<br>
+            ManusとMiriCanvasで叶える<br>
+            "放置プレイ"コンテンツ制作
+        </div>
+        <div class="automation-flow">
+            <div class="flow-item">Manus</div>
+            <div class="arrow">→</div>
+            <div class="flow-item">MiriCanvas</div>
+            <div class="arrow">→</div>
+            <div class="flow-item">🚀</div>
+        </div>
+        <div style="text-align: center;">
+            <div class="session-time">
+                14:30 - 14:50
+            </div>
+        </div>
+    </div>
+</body>
+</html>

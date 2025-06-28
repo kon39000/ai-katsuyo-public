@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0, user-scalable=no">
+    <title>AIを使ってどんなプログラムが作れるの？ - むなかた | 第2回AI活用大発表会</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            color: #333;
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 0;
+            padding: 60px;
+            box-shadow: none;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .event-header {
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            right: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+        .event-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #2d3436;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .event-date {
+            font-size: 1.3em;
+            color: #636e72;
+            font-weight: 600;
+        }
+        .speaker-profile {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 40px;
+            justify-content: center;
+        }
+        .speaker-icon {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 6px solid #fcb69f;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        .speaker-info h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            color: #2d3436;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+        }
+        .speaker-info .org {
+            font-size: 1.8em;
+            color: #636e72;
+            font-weight: 600;
+        }
+        .session-title {
+            font-size: 2.8em;
+            line-height: 1.3;
+            margin-bottom: 30px;
+            text-align: center;
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            color: #333;
+            padding: 35px;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 20px 50px rgba(252, 182, 159, 0.4);
+        }
+        .session-time {
+            font-size: 1.8em;
+            text-align: center;
+            color: #2d3436;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 12px 25px;
+            border-radius: 50px;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .code-display {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 1.4em;
+            overflow-x: auto;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        .code-display pre {
+            margin: 0;
+            white-space: pre-wrap;
+        }
+        .highlight {
+            color: #a6e22e;
+        }
+        .string {
+            color: #e6db74;
+        }
+        .comment {
+            color: #75715e;
+            font-style: italic;
+        }
+        .keyword {
+            color: #66d9ef;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="event-header">
+            <div class="event-title">第2回AI活用大発表会</div>
+            <div class="event-date">2025年6月28日（土）</div>
+        </div>
+        <div class="speaker-profile">
+            <img src="../image/munakasa_icon.jpg" alt="むなかた" class="speaker-icon">
+            <div class="speaker-info">
+                <h1>むなかた</h1>
+                <p class="org">創理</p>
+            </div>
+        </div>
+        <div class="session-title">
+            AIを使って<br>どんなプログラムが作れるの？
+        </div>
+        <div class="code-display">
+            <pre><span class="comment">// AIで作成可能なプログラム例</span>
+<span class="keyword">const</span> <span class="highlight">possibilities</span> = [
+  <span class="string">"Webアプリケーション"</span>,
+  <span class="string">"データ分析ツール"</span>,
+  <span class="string">"自動化スクリプト"</span>,
+  <span class="string">"ゲーム開発"</span>,
+  <span class="string">"API連携システム"</span>
+];</pre>
+        </div>
+        <div style="text-align: center;">
+            <div class="session-time">
+                13:50 - 14:10
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peatix申込者用特設ページ | 第2回AI活用大発表会</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: #f5f5f5;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        .page-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+        }
+        .slides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .slide-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        .slide-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        .slide-header {
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .slide-time {
+            font-size: 0.9em;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+        .slide-speaker {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .speaker-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+        .speaker-name {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .speaker-org {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .slide-content {
+            padding: 20px;
+        }
+        .slide-title {
+            font-size: 1.1em;
+            line-height: 1.5;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .slide-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .youtube-link, .slide-link {
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .youtube-link {
+            background: #ff0000;
+            color: white;
+        }
+        .youtube-link:hover {
+            background: #cc0000;
+            transform: scale(1.05);
+        }
+        .slide-link {
+            background: #667eea;
+            color: white;
+        }
+        .slide-link:hover {
+            background: #5a67d8;
+            transform: scale(1.05);
+        }
+        .bonus-link {
+            background: #28a745;
+            color: white;
+        }
+        .bonus-link:hover {
+            background: #218838;
+            transform: scale(1.05);
+        }
+        .bonus-section {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        .bonus-title {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .keynote {
+            grid-column: span 2;
+        }
+        .keynote .slide-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        @media (max-width: 768px) {
+            .keynote {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>第2回AI活用大発表会</h1>
+        <div class="page-subtitle">🎫 Peatix申込者用特設ページ</div>
+        <div class="slides-grid">
+            <div class="slide-card keynote">
+                <div class="slide-header">
+                    <div class="slide-time">11:30 - 12:30</div>
+                    <div class="slide-speaker">
+                        <img src="../image/ikehaya_icon.png" alt="ikehaya" class="speaker-icon">
+                        <div>
+                            <div class="speaker-name">ikehaya</div>
+                            <div class="speaker-org">Ninja DAO</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-content">
+                    <div class="slide-title">基調講演</div>
+                    <div class="slide-links">
+                        <a href="https://www.youtube.com/@nsc-nmo" class="youtube-link" target="_blank">
+                            📺 YouTube
+                        </a>
+                        <a href="ikehaya.html" class="slide-link" target="_blank">
+                            🖼️ スライド
+                        </a>
+                    </div>
+                    <div class="bonus-section">
+                        <div class="bonus-title">🎁 特典・参考記事</div>
+                        <div class="slide-links">
+                            <a href="https://note.com/ihayato/n/n262c659acc7a" class="bonus-link" target="_blank">
+                                📝 Gemini導入記事
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide-card">
+                <div class="slide-header">
+                    <div class="slide-time">12:30 - 12:50</div>
+                    <div class="slide-speaker">
+                        <img src="../image/mukai_icon.jpg" alt="ムカイ" class="speaker-icon">
+                        <div>
+                            <div class="speaker-name">ムカイ</div>
+                            <div class="speaker-org">TheMafiaAnimals</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-content">
+                    <div class="slide-title">会社員必聴 AIで可能にしたバックオフィス自動化</div>
+                    <div class="slide-links">
+                        <a href="https://www.youtube.com/@nsc-nmo" class="youtube-link" target="_blank">
+                            📺 YouTube
+                        </a>
+                        <a href="mukai.html" class="slide-link" target="_blank">
+                            🖼️ スライド
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide-card">
+                <div class="slide-header">
+                    <div class="slide-time">12:50 - 13:10</div>
+                    <div class="slide-speaker">
+                        <img src="../image/mika_icon.jpg" alt="ボイストレーナーみか" class="speaker-icon">
+                        <div>
+                            <div class="speaker-name">ボイストレーナーみか</div>
+                            <div class="speaker-org">声DAO</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-content">
+                    <div class="slide-title">「私の声、周りにどう聞こえてる？」AIが解き明かす、話し方・歌声の秘密</div>
+                    <div class="slide-links">
+                        <a href="https://youtu.be/--oZGZl5ZQY" class="youtube-link" target="_blank">
+                            📺 YouTube
+                        </a>
+                        <a href="mika.html" class="slide-link" target="_blank">
+                            🖼️ スライド
+                        </a>
+                    </div>
+                    <div class="bonus-section">
+                        <div class="bonus-title">🎁 特典受け取り</div>
+                        <div class="slide-links">
+                            <a href="https://experisent.systeme.io/b8067cff" class="bonus-link" target="_blank">
+                                📧 メルマガ登録
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide-card">
+                <div class="slide-header">
+                    <div class="slide-time">13:10 - 13:30</div>
+                    <div class="slide-speaker">
+                        <img src="../image/gakushi_icon.jpg" alt="gakushi" class="speaker-icon">
+                        <div>
+                            <div class="speaker-name">gakushi</div>
+                            <div class="speaker-org"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-content">
+                    <div class="slide-title">子供とVibe codingでゲームをつくるコツ</div>
+                    <div class="slide-links">
+                        <a href="https://youtu.be/58dAxUIwFcg" class="youtube-link" target="_blank">
+                            📺 YouTube
+                        </a>
+                        <a href="gakushi.html" class="slide-link" target="_blank">
+                            🖼️ スライド
+                        </a>
+                    </div>
+                    <div class="bonus-section">
+                        <div class="bonus-title">🎁 作成したゲーム</div>
+                        <div class="slide-links">
+                            <a href="https://chemtoollab.com/LP/ACL-202506/" class="bonus-link" target="_blank">
+                                🎮 ゲームをプレイ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide-card">
+                <div class="slide-header">
+                    <div class="slide-time">13:30 - 13:50</div>
+                    <div class="slide-speaker">
+                        <img src="../image/syou_icon.png" alt="ショウ" class="speaker-icon">
+                        <div>
+                            <div class="speaker-name">ショウ</div>
+                            <div class="speaker-org">銘心</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-content">
+                    <div class="slide-title">「旅行するなら、どこに行きたい？」Gemini × Googleアプリを連携させた旅行計画</div>
+                    <div class="slide-links">
+                        <a href="https://youtu.be/by8hQ5bLdOo" class="youtube-link" target="_blank">
+                            📺 YouTube
+                        </a>
+                        <a href="syou.html" class="slide-link" target="_blank">
+                            🖼️ スライド
+                        </a>
+                    </div>
+                    <div class="bonus-section">
+                        <div class="bonus-title">🎁 特典受け取り</div>
+                        <div class="slide-links">
+                            <a href="https://sho-ai.net/p/r/Kyx4MNGf" class="bonus-link" target="_blank">
+                                📧 メルマガ登録
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide-card">
+                <div class="slide-header">
+                    <div class="slide-time">13:50 - 14:10</div>
+                    <div class="slide-speaker">
+                        <img src="../image/munakasa_icon.jpg" alt="むなかた" class="speaker-icon">
+                        <div>
+                            <div class="speaker-name">むなかた</div>
+                            <div class="speaker-org">創理</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-content">
+                    <div class="slide-title">AIを使ってどんなプログラムが作れるの？</div>
+                    <div class="slide-links">
+                        <a href="https://youtu.be/N_gyPBMB8C0" class="youtube-link" target="_blank">
+                            📺 YouTube
+                        </a>
+                        <a href="munakasa.html" class="slide-link" target="_blank">
+                            🖼️ スライド
+                        </a>
+                    </div>
+                    <div class="bonus-section">
+                        <div class="bonus-title">🎁 デモサイト・資料</div>
+                        <div class="slide-links">
+                            <a href="https://www.canva.com/design/DAGrieJfhpY/4714eX288r9_XlN_YYjiqA/view?utm_content=DAGrieJfhpY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h666dfdf914" class="bonus-link" target="_blank">
+                                📊 デモサイト
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide-card">
+                <div class="slide-header">
+                    <div class="slide-time">14:10 - 14:30</div>
+                    <div class="slide-speaker">
+                        <img src="../image/riko_icon.jpg" alt="りこ" class="speaker-icon">
+                        <div>
+                            <div class="speaker-name">りこ</div>
+                            <div class="speaker-org">AIらぼ</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-content">
+                    <div class="slide-title">全国民発信者デビュー！AI×ショート動画革命</div>
+                    <div class="slide-links">
+                        <a href="https://youtu.be/0Y9xgRq-TGU" class="youtube-link" target="_blank">
+                            📺 YouTube
+                        </a>
+                        <a href="riko.html" class="slide-link" target="_blank">
+                            🖼️ スライド
+                        </a>
+                    </div>
+                    <div class="bonus-section">
+                        <div class="bonus-title">🎁 特典受け取り</div>
+                        <div class="slide-links">
+                            <a href="https://lin.ee/jEmWo52" class="bonus-link" target="_blank">
+                                📱 LINE登録
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide-card">
+                <div class="slide-header">
+                    <div class="slide-time">14:30 - 14:50</div>
+                    <div class="slide-speaker">
+                        <img src="../image/pesuhamu_icon.jpg" alt="ペスハム" class="speaker-icon">
+                        <div>
+                            <div class="speaker-name">ペスハム</div>
+                            <div class="speaker-org">メタマケ</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-content">
+                    <div class="slide-title">手離れ最強！ManusとMiriCanvasで叶える"放置プレイ"コンテンツ制作</div>
+                    <div class="slide-links">
+                        <a href="https://youtu.be/ZfMfZg4uGd4" class="youtube-link" target="_blank">
+                            📺 YouTube
+                        </a>
+                        <a href="pesuhamu.html" class="slide-link" target="_blank">
+                            🖼️ スライド
+                        </a>
+                    </div>
+                    <div class="bonus-section">
+                        <div class="bonus-title">🎁 招待コード・クーポン</div>
+                        <div class="slide-links">
+                            <a href="https://manus.im/invitation/1HBAVIMRKQYTK" class="bonus-link" target="_blank">
+                                🔗 MANUS招待
+                            </a>
+                            <a href="https://www.udemy.com/course/manusaimanus/?couponCode=MANUSACL202506" class="bonus-link" target="_blank">
+                                🎓 MANUS講座
+                            </a>
+                            <a href="https://www.miricanvas.com?type=friend_invite&code=yhv-hkd-ohj&ml=ja" class="bonus-link" target="_blank">
+                                🎨 MIRICANVAS招待
+                            </a>
+                            <a href="https://miricanvas.com/v/14t0d1p" class="bonus-link" target="_blank">
+                                💰 特別クーポン
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide-card">
+                <div class="slide-header">
+                    <div class="slide-time">14:50 - 15:10</div>
+                    <div class="slide-speaker">
+                        <img src="../image/tk_icon.jpg" alt="tk (ティーケー)" class="speaker-icon">
+                        <div>
+                            <div class="speaker-name">tk (ティーケー)</div>
+                            <div class="speaker-org">ACL、ひとジェネ</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-content">
+                    <div class="slide-title">文章が苦手でも大丈夫！AIがあなたの「書きたい」をカタチにする【AI小説講座】</div>
+                    <div class="slide-links">
+                        <a href="https://youtu.be/B9gnhs0BiAg" class="youtube-link" target="_blank">
+                            📺 YouTube
+                        </a>
+                        <a href="tk.html" class="slide-link" target="_blank">
+                            🖼️ スライド
+                        </a>
+                    </div>
+                    <div class="bonus-section">
+                        <div class="bonus-title">🎁 特典・アカウント</div>
+                        <div class="slide-links">
+                            <a href="https://www.tk-rock.com/merumaga-touoku" class="bonus-link" target="_blank">
+                                📧 メルマガ登録
+                            </a>
+                            <a href="https://tales.note.com/calm_holly485" class="bonus-link" target="_blank">
+                                📚 Tales
+                            </a>
+                            <a href="https://note.com/calm_holly485" class="bonus-link" target="_blank">
+                                📝 note
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide-card">
+                <div class="slide-header">
+                    <div class="slide-time">15:10 - 15:30</div>
+                    <div class="slide-speaker">
+                        <img src="../image/korosuke_icon.jpg" alt="ころすけ" class="speaker-icon">
+                        <div>
+                            <div class="speaker-name">ころすけ</div>
+                            <div class="speaker-org">AI Dreamers Production</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-content">
+                    <div class="slide-title">Genspark AIブラウザで変わる情報収集革命 〜検索からリサーチへのパラダイムシフト〜</div>
+                    <div class="slide-links">
+                        <a href="https://www.youtube.com/@nsc-nmo" class="youtube-link" target="_blank">
+                            📺 YouTube
+                        </a>
+                        <a href="korosuke.html" class="slide-link" target="_blank">
+                            🖼️ スライド
+                        </a>
+                    </div>
+                    <div class="bonus-section">
+                        <div class="bonus-title">🎁 Genspark特典</div>
+                        <div class="slide-links">
+                            <a href="https://ai-dreamers-production.notion.site/Genspark-20250628-2208a44680a8806d8c40ccddb9103b9f?source=copy_link" class="bonus-link" target="_blank">
+                                💳 90%OFFクーポン
+                            </a>
+                            <a href="https://genspark-i-ambassador.jp/" class="bonus-link" target="_blank">
+                                🎯 アンバサダー募集
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide-card">
+                <div class="slide-header">
+                    <div class="slide-time">15:30 - 15:50</div>
+                    <div class="slide-speaker">
+                        <img src="../image/umino_icon.jpg" alt="ウミノ" class="speaker-icon">
+                        <div>
+                            <div class="speaker-name">ウミノ</div>
+                            <div class="speaker-org">AIとマーケティングの専門家</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-content">
+                    <div class="slide-title">もう時間がないとは言わせない！Gemini 2.5 Proで始める週末作家のススメ</div>
+                    <div class="slide-links">
+                        <a href="https://youtu.be/dk-bAty8Jxk" class="youtube-link" target="_blank">
+                            📺 YouTube
+                        </a>
+                        <a href="umino.html" class="slide-link" target="_blank">
+                            🖼️ スライド
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- お知らせスライド -->
+        <div style="grid-column: 1 / -1; margin-top: 40px;">
+            <h2 style="text-align: center; color: #333; margin-bottom: 20px; font-size: 2em;">お知らせ</h2>
+            <div class="slide-card" style="max-width: 600px; margin: 0 auto; display: block;">
+                <div class="slide-header" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <div class="slide-speaker">
+                        <div style="font-size: 3em;">📢</div>
+                        <div>
+                            <div class="speaker-name">重要なお知らせ</div>
+                            <div class="speaker-org">AIコンテンツラボ</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-content">
+                    <div class="slide-title">アーカイブ配信・3つの重大発表・月額会員募集</div>
+                    <div class="slide-links">
+                        <a href="https://www.youtube.com/@nsc-nmo" class="youtube-link" target="_blank">
+                            📺 YouTube
+                        </a>
+                        <a href="announcement.html" class="slide-link" target="_blank">
+                            🖼️ スライド
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

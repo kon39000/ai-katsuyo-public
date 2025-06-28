@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0, user-scalable=no">
+    <title>Genspark AIブラウザで変わる情報収集革命 - ころすけ | 第2回AI活用大発表会</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #0093E9 0%, #80D0C7 100%);
+            color: #fff;
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 0;
+            padding: 80px 60px 60px 60px;
+            box-shadow: none;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .event-header {
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            right: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+        .event-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2d3436;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+        .event-date {
+            font-size: 1.1em;
+            color: #636e72;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        .speaker-profile {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 25px;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .speaker-icon {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 5px solid #0093E9;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            flex-shrink: 0;
+        }
+        .speaker-info h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            color: #2d3436;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+            flex-shrink: 0;
+        }
+        .speaker-info .org {
+            font-size: 1.4em;
+            color: #636e72;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        .session-title {
+            font-size: 2.0em;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #0093E9, #80D0C7);
+            color: #fff;
+            padding: 25px;
+            border-radius: 20px;
+            font-weight: bold;
+            box-shadow: 0 20px 50px rgba(0, 147, 233, 0.4);
+            flex-shrink: 0;
+        }
+        .session-time {
+            font-size: 1.5em;
+            text-align: center;
+            color: #2d3436;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 20px;
+            border-radius: 40px;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+        .paradigm-shift {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            margin: 25px 0 20px 0;
+            flex-shrink: 0;
+        }
+        .shift-item {
+            text-align: center;
+            background: rgba(0, 147, 233, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            border: 3px solid #0093E9;
+            box-shadow: 0 15px 35px rgba(0, 147, 233, 0.2);
+            flex-shrink: 0;
+        }
+        .shift-icon {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+            flex-shrink: 0;
+        }
+        .shift-text {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #2d3436;
+            flex-shrink: 0;
+        }
+        .shift-arrow {
+            font-size: 3.2em;
+            color: #80D0C7;
+            filter: drop-shadow(0 5px 15px rgba(128, 208, 199, 0.5));
+            animation: pulse 2s ease-in-out infinite;
+            flex-shrink: 0;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="event-header">
+            <div class="event-title">第2回AI活用大発表会</div>
+            <div class="event-date">2025年6月28日（土）</div>
+        </div>
+        <div class="speaker-profile">
+            <img src="../image/korosuke_icon.jpg" alt="ころすけ" class="speaker-icon">
+            <div class="speaker-info">
+                <h1>ころすけ</h1>
+                <p class="org">AI Dreamers Production</p>
+            </div>
+        </div>
+        <div class="session-title">
+            Genspark AIブラウザで変わる情報収集革命<br>
+            〜検索からリサーチへのパラダイムシフト〜
+        </div>
+        <div class="paradigm-shift">
+            <div class="shift-item">
+                <div class="shift-icon">🔍</div>
+                <div class="shift-text">検索</div>
+            </div>
+            <div class="shift-arrow">→</div>
+            <div class="shift-item">
+                <div class="shift-icon">🧠</div>
+                <div class="shift-text">リサーチ</div>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <div class="session-time">
+                15:10 - 15:30
+            </div>
+        </div>
+    </div>
+</body>
+</html>
